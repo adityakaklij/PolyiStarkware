@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PoliStarkWare</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        #prompt-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            text-align: center;
+        }
+        #prompt-input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        #instructions {
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        #loading {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id="prompt-container">
+        <input type="text" id="prompt-input" placeholder="Enter your world description...">
+        <div id="instructions">
+            Use WASD or Arrow Keys to move around<br>
+            Enter a prompt and press Enter to generate a new world
+        </div>
+    </div>
+    <div id="loading">Generating your world...</div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@starknet-dev/starknet@0.3.0/dist/starknet.js"></script> -->
+    <script src="
+https://cdn.jsdelivr.net/npm/@jediswap/starknet@2.7.4/dist/index.min.js
+"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
